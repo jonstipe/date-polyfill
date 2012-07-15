@@ -13,15 +13,15 @@ A default CSS file is provided. You may edit this file to style the input fields
 
 ## Dependencies
 
-This script requires jQuery[http://jquery.com/], jQuery UI[http://jqueryui.com/], and Modernizr[http://www.modernizr.com/].
+This script requires [jQuery](http://jquery.com/), [jQuery UI](http://jqueryui.com/), and [Modernizr](http://www.modernizr.com/).
 
 ## See also
 
 [Compatibility chart for input datetime elements](http://caniuse.com/input-datetime)
 
-* datetime-local-polyfill[https://github.com/jonstipe/datetime-local-polyfill]
-* datetime-polyfill[https://github.com/jonstipe/datetime-polyfill]
-* time-polyfill[https://github.com/jonstipe/time-polyfill]
+* [datetime-local-polyfill](https://github.com/jonstipe/datetime-local-polyfill)
+* [datetime-polyfill](https://github.com/jonstipe/datetime-polyfill)
+* [time-polyfill](https://github.com/jonstipe/time-polyfill)
 
 ## License (MIT)
 Copyright (c) 2012 Jonathan Stipe
