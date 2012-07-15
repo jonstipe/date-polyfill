@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Date polyfill</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery.ui.all.css" />
+    <link rel="stylesheet" href="date-polyfill.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
+    <script type="text/javascript" src="date-polyfill.js"></script>
+  </head>
+  <body>
+<form id="form-demo"> 
+<dl>
+<dt>date (with value, min, and max)</dt>
+<dd><input type="date" name="myDate0" value="2000-01-01" min="1999-01-01" max="2000-12-31" /></dd>
+
+<dt>date (with value and max)</dt>
+<dd><input type="date" name="myDate1" value="2000-01-01" max="2000-12-31" /></dd>
+
+<dt>date (with value and min)</dt>
+<dd><input type="date" name="myDate2" value="2000-01-01" min="1999-01-01" /></dd>
+
+<dt>date (with value and step)</dt>
+<dd><input type="date" name="myDate3" value="2000-01-01" step="7" /></dd>
+
+<dt>date (with value, min, max, and step)</dt>
+<dd><input type="date" name="myDate4" value="2000-01-01" min="1999-01-01" max="2000-12-31" step="7" /></dd>
+
+<dt>date (with min and max)</dt>
+<dd><input type="date" name="myDate5" min="1999-01-01" max="2000-12-31" /></dd>
+
+<dt>date (with just min)</dt>
+<dd><input type="date" name="myDate6" min="1999-01-01" /></dd>
+
+<dt>date (with just max)</dt>
+<dd><input type="date" name="myDate7" max="2000-12-31" /></dd>
+
+<dt>date (with just step)</dt>
+<dd><input type="date" name="myDate8" step="7" /></dd>
+
+<dt>date (with min, max, and step)</dt>
+<dd><input type="date" name="myDate9" min="1999-01-01" max="2000-12-31" step="7" /></dd>
+
+<dt>date (with min and step)</dt>
+<dd><input type="date" name="myDate10" min="1999-01-01" step="7" /></dd>
+
+<dt>date (with max and step)</dt>
+<dd><input type="date" name="myDate11" max="2000-12-31" step="7" /></dd>
+
+<dt>date (with value, min, max, and step=any)</dt>
+<dd><input type="date" name="myDate12" value="2000-07-01" min="2000-01-01" max="2000-12-31" step="any" /></dd>
+
+<dt>date (with value, max, and step=any)</dt>
+<dd><input type="date" name="myDate13" value="2000-07-01" max="2000-12-31" step="any" /></dd>
+
+<dt>date (with value, min, and step=any)</dt>
+<dd><input type="date" name="myDate14" value="2000-07-01" min="2000-01-01" step="any" /></dd>
+
+<dt>date (with max and step=any)</dt>
+<dd><input type="date" name="myDate15" max="2000-12-31" step="any" /></dd>
+
+<dt>date (with min and step=any)</dt>
+<dd><input type="date" name="myDate16" min="2000-01-01" step="any" /></dd>
+
+<dt>date (with step=any)</dt>
+<dd><input type="date" name="myDate17" step="any" /></dd>
+
+<dt>date (without anything)</dt>
+<dd><input type="date" name="myDate18" /></dd>
+</dl>
+<input type="submit" /> 
+</form> 
+</body>
+</html>
