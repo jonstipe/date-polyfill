@@ -22,6 +22,8 @@ This script requires [jQuery](http://jquery.com/), [jQuery UI](http://jqueryui.c
 * [datetime-local-polyfill](https://github.com/jonstipe/datetime-local-polyfill)
 * [datetime-polyfill](https://github.com/jonstipe/datetime-polyfill)
 * [time-polyfill](https://github.com/jonstipe/time-polyfill)
+* [week-polyfill](https://github.com/jonstipe/week-polyfill)
+* [month-polyfill](https://github.com/jonstipe/month-polyfill)
 
 ## License (MIT)
 Copyright (c) 2012 Jonathan Stipe

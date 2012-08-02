@@ -68,25 +68,15 @@
         if (step !== undefined && step != 'any') {
           var kNum = inDate.getTime();
           var raisedStep = step * 86400000;
-          if (min !== undefined) {
-            var minNum = min.getTime();
-            var stepDiff = (kNum - minNum) % raisedStep;
-            var stepDiff2 = raisedStep - stepDiff;
-            if (stepDiff == 0) return inDate;
-            else {
-              if (stepDiff > stepDiff2) return new Date(inDate.getTime() + stepDiff2);
-              else return new Date(inDate.getTime() - stepDiff);
-            }
-          } else if (max !== undefined) {
-            var maxNum = max.getTime();
-            var stepDiff = (maxNum - kNum) % raisedStep;
-            var stepDiff2 = raisedStep - stepDiff;
-            if (stepDiff == 0) return inDate;
-            else {
-              if (stepDiff > stepDiff2) return new Date(inDate.getTime() - stepDiff2);
-              else return new Date(inDate.getTime() + stepDiff);
-            }
-          } else return inDate;
+          if (min === undefined) min = new Date(1970, 0, 1);
+          var minNum = min.getTime();
+          var stepDiff = (kNum - minNum) % raisedStep;
+          var stepDiff2 = raisedStep - stepDiff;
+          if (stepDiff == 0) return inDate;
+          else {
+            if (stepDiff > stepDiff2) return new Date(inDate.getTime() + stepDiff2);
+            else return new Date(inDate.getTime() - stepDiff);
+          }
         } else return inDate;
       }
       $('input[type="date"]').each(function(index) {
@@ -142,15 +132,10 @@
           beforeShowDay: function(dateObj) {
             if (step === undefined || step == 'any') return [true, ''];
             else {
-              if (min !== undefined) {
-                var dateDays = Math.floor(dateObj.getTime() / 86400000);
-                var minDays = Math.floor(min.getTime() / 86400000);
-                return [((dateDays - minDays) % step == 0), ''];
-              } else if (max !== undefined) {
-                var dateDays = Math.floor(dateObj.getTime() / 86400000);
-                var maxDays = Math.floor(max.getTime() / 86400000);
-                return [((maxDays - dateDays) % step == 0), ''];
-              } else return [true, ''];
+              if (min === undefined) min = new Date(1970, 0, 1);
+              var dateDays = Math.floor(dateObj.getTime() / 86400000);
+              var minDays = Math.floor(min.getTime() / 86400000);
+              return [((dateDays - minDays) % step == 0), ''];
             }
           }
         });
