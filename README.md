@@ -4,7 +4,7 @@ This is a polyfill for implementing the HTML5 `<input type="date">` element in b
 
 ## Usage
 
-Using it is easy — simply include the `date-polyfill.js` file in the HEAD of the HTML page.  
+Using it is easy — simply include the `date-polyfill.min.js` file in the HEAD of the HTML page.  
 You can then use `<input type="date">` elements normally.
 
 If the script detects that the browser doesn't support `<input type="date">`, it will search for these elements and replace them with a jQuery UI datepicker to select the date. The date selection is stored in a hidden form field and submitted with the form in the standard format.
