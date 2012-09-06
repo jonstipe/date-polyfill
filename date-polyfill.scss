@@ -1,0 +1,37 @@
+/* !HTML5 Date polyfill | Jonathan Stipe | https://github.com/jonstipe/date-polyfill */
+
+@mixin transition($data...) {
+  -moz-transition: $data;
+  -webkit-transition: $data;
+  -o-transition: $data;
+  -ms-transition: $data;
+  transition: $data;
+}
+
+button.date-datepicker-button:after {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border: {
+    style: solid;
+    width: 0.4em 0.4em 0em 0.4em;
+    color: black transparent transparent transparent;
+  }
+  margin: 0em 0em 0.2em 0.7em;
+  vertical-align: middle;
+}
+
+.csstransitions {
+  div.date-calendar-dialog.date-closed {
+    @include transition(opacity 0.4s linear);
+    opacity: 0;
+  }
+  
+  div.date-calendar-dialog.date-open {
+    @include transition(opacity 0.4s linear);
+    opacity: 1;
+  }
+}
+
+
