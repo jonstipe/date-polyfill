@@ -176,7 +176,7 @@ HTML5 Date polyfill | Jonathan Stipe | https://github.com/jonstipe/date-polyfill
               null
             $calendarDiv.on "transitionend oTransitionEnd webkitTransitionEnd MSTransitionEnd", transitionend_function
             calendarDiv.className = "date-calendar-dialog date-closed"
-          event.preventDefault()
+          event.preventDefault() if event?
           null
       else
         $dateBtn.click (event) ->
@@ -185,7 +185,7 @@ HTML5 Date polyfill | Jonathan Stipe | https://github.com/jonstipe/date-polyfill
           false
         closeFunc = (event) ->
           $calendarDiv.fadeOut 'fast'
-          event.preventDefault()
+          event.preventDefault() if event?
           null
 
       $calendarDiv.mouseleave closeFunc
