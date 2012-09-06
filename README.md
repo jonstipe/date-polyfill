@@ -11,9 +11,17 @@ If the script detects that the browser doesn't support `<input type="date">`, it
 
 A default CSS file is provided. You may edit this file to style the input fields to make them look the way you want.
 
+## Manual usage
+
+The script can also be called manually as a jQuery plugin for elements dynamically generated through script. Simply call the `.inputDate()` method on any jQuery object containing one or more `<input type="date">` elements.
+
 ## Dependencies
 
 This script requires [jQuery](http://jquery.com/), [jQuery UI](http://jqueryui.com/), and [Modernizr](http://www.modernizr.com/).
+
+## Demo
+
+http://jonstipe.github.com/date-polyfill/demo.html
 
 ## See also
 

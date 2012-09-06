@@ -2,13 +2,35 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-    <title>Date polyfill</title>
+    <title>HTML5 Date polyfill</title>
+    <meta name="author" content="Jonathan Stipe" />
+    <meta name="copyright" content="&copy; 2012 Jonathan Stipe" />
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/base/jquery.ui.all.css" />
     <link rel="stylesheet" href="date-polyfill.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://www.modernizr.com/downloads/modernizr-latest.js"></script>
     <script type="text/javascript" src="date-polyfill.js"></script>
+    <script type="text/javascript">
+//<![CDATA[
+$(function() {
+  var dtElem = document.createElement("dt"),
+      ddElem = document.createElement("dd"),
+      inputElem = document.createElement("input");
+    dtElem.appendChild(document.createTextNode("Dynamically generated element"));
+    $(inputElem).attr({
+      type: 'date',
+      name: 'generatedElement',
+      value: '2000-01-01',
+      min: '1999-01-01',
+      max: '2000-12-31'
+    });
+    ddElem.appendChild(inputElem);
+    $('dl').first().append(dtElem).append(ddElem);
+    $(inputElem).inputDate();
+});
+//]]>
+    </script>
   </head>
   <body>
 <form id="form-demo"> 
@@ -71,6 +93,8 @@
 <dd><input type="date" name="myDate18" /></dd>
 </dl>
 <input type="submit" /> 
-</form> 
+</form>
+
+<a href="https://github.com/jonstipe/date-polyfill">Back to GitHub repo</a>
 </body>
 </html>
