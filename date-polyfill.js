@@ -228,7 +228,9 @@ HTML5 Date polyfill | Jonathan Stipe | https://github.com/jonstipe/date-polyfill
               $calendarDiv.on("transitionend oTransitionEnd webkitTransitionEnd MSTransitionEnd", transitionend_function);
               calendarDiv.className = "date-calendar-dialog date-closed";
             }
-            event.preventDefault();
+            if (event != null) {
+              event.preventDefault();
+            }
             return null;
           };
         } else {
@@ -239,7 +241,9 @@ HTML5 Date polyfill | Jonathan Stipe | https://github.com/jonstipe/date-polyfill
           });
           closeFunc = function(event) {
             $calendarDiv.fadeOut('fast');
-            event.preventDefault();
+            if (event != null) {
+              event.preventDefault();
+            }
             return null;
           };
         }
